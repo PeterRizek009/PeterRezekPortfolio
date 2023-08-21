@@ -28,7 +28,7 @@ const Header = () => {
                 <div className="Rectangle1  md:absolute top-56 left-[80%] w-32 h-32 bg-zinc-300 bg-opacity-0 border border-zinc-300" />
             </div>
 
-            <div className="md:w-[1800px] w-[80%] h-px bg-white mx-auto my-28" />
+            <div className="md:w-[1800px] w-[80%] h-px bg-white mx-auto mt-28 mb-8" />
         </div>
     );
 }

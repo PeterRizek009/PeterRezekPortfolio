@@ -3,6 +3,7 @@ import { BsGithub, BsLinkedin } from 'react-icons/bs'
 import Header from './header/header';
 import { useEffect, useState } from 'react';
 import Loading from './loading/loading';
+import Skills from './skills/skills';
 
 
 
@@ -44,6 +45,8 @@ function App() {
       </div> */}
 
             <Header />
+            <Skills />
+            <Skills />
           </div>
           :
           <Loading />
