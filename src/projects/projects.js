@@ -68,7 +68,7 @@ const Projects = () => {
           
                 <div className='projects w-full p-8  flex md:justify-between items-start justify-center flex-wrap'>
                     {projectData.map((project, index) => (
-                        <div className='project md:w-[547px] w-[80%] h-[400px]  my-8 mx-2 py-14 flex flex-col justify-start items-star' key={index}>
+                        <div className='project md:w-[547px] w-[80%] h-[400px]  my-8 mx-2 py-14 flex flex-col justify-start items-star' key={project.name}>
                             <a href={project.url}>
                                 <div className='relative md:h-[290px] md:w-[547px] h-[240px] w-[350px]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800' style={{ backgroundImage: `url(${project.image})` }}></div>
                                 <h1 className='uppercase py-4 text-xl font-bold hover:text-violet-800'>{project.name}</h1>
