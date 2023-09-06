@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         custom: ['Hanken Grotesk', 'sans-serif'],
-        signature: ['Dancing Script', 'cursive']
+        signature: ['Fasthand', 'cursive']
       },
     },
   },

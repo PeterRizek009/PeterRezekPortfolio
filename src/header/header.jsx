@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
     return (
 
-        <div className='header md:max-w-[1200px] lg:max-w-[1600px]  mx-auto'>
+        <div className='header md:max-w-[1200px]   mx-auto'>
 
 
             <svg className="opacity-25 md:w-[530px] w-[350px] h-[129px] absolute left-0 top-[150px]">
@@ -16,9 +16,9 @@ const Header = () => {
             </svg>
 
 
-            <div className="w-auto h-auto my-10 flex flex-col flex-wrap justify-between md:items-start items-center gap-[20px]">
-                <div className="w-[400px]  md:w-auto  text-white md:text-[80px] text-[40px] font-bold">Nice to meet you! <br />I’m <span className='border-b-4 border-violet-800'>Peter Rezeik.</span> </div>
-                <p className="md:w-[800px] w-[320px]  h-auto text-zinc-300 text-lg font-medium leading-7 my-10">With extensive programming experience since age 9, I've cultivated a fervent passion for machine learning. Committed to continuous learning, I aspire to leverage my competencies in this field to eventually build my career.</p>
+            <div className="w-auto h-auto my-10 flex flex-col flex-wrap justify-between md:items-start items-center gap-[20px] mx-auto">
+                <div className="w-[300px]  md:w-auto  text-white md:text-[80px] text-[40px] font-bold">Nice to meet you! <br />I’m <span className='border-b-4 border-violet-800'>Peter Rezeik.</span> </div>
+                <p className="md:w-[800px] w-[300px]  h-auto text-zinc-300 text-lg font-medium leading-7 my-10">With extensive programming experience since age 9, I've cultivated a fervent passion for machine learning. Committed to continuous learning, I aspire to leverage my competencies in this field to eventually build my career.</p>
             
 
             </div>

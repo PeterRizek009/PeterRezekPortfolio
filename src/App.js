@@ -32,8 +32,8 @@ function App() {
 
 
           <div className="App bg-newBlack font-custom text-gray">
-            <nav className='flex flex-wrap justify-between items-center py-5 md:max-w-[1600px]  mx-auto'>
-              <h1 className='text-white md:font-bold font-medium border-b-4 border-violet-800 py-2 md:mx-5 mx-1 tracking-widest'>PETER REZEIK</h1>
+            <nav className='flex flex-wrap justify-between items-center py-5 md:max-w-[1200px]  mx-auto'>
+              <h1 className='text-white md:font-bold text-base border-b-4 border-violet-800 py-2 md:mx-5 mx-1'>PETER REZEIK</h1>
               <div className='icons flex justify-between'>
                 <a className='cursor-pointer mx-4' href='https://github.com/PeterRizek009'>
                   <BsGithub size={32} className='hover:text-violet-800' />
