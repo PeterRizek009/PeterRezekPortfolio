@@ -62,7 +62,7 @@ const Projects = () => {
     // }
 
     return (
-        <div className='md:max-w-[1200px] lg:max-w-[1600px]   mx-auto py-4'>
+        <div className='md:max-w-[1200px]  mx-auto py-4'>
             <div className='block text-white text-2xl md:text-5xl font-bold leading-10 md:pb-4 p-2  border-b-4 border-violet-800 md:w-[400px] w-[200px] md:text-left text-center mx-auto md:mx-2'>Projects</div>
 
           
