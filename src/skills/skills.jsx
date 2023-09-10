@@ -50,7 +50,7 @@ const Skills = () => {
         },
     ]
     return (
-        <div className='md:max-w-[1200px]  mx-auto py-4'>
+        <div className='md:max-w-[80%]   mx-auto py-4'>
             <div className='block text-white text-2xl md:text-5xl font-bold leading-10 md:pb-4 p-2  border-b-4 border-violet-800 md:w-[400px] w-[200px] mx-auto md:mx-2'>Technical Skills</div>
             <div className='flex w-full justify-between items-center flex-wrap'>
                 {skills.map((el) =>

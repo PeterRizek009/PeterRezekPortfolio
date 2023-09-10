@@ -62,15 +62,15 @@ const Projects = () => {
     // }
 
     return (
-        <div className='md:max-w-[1200px]  mx-auto py-4'>
-            <div className='block text-white text-2xl md:text-5xl font-bold leading-10 md:pb-4 p-2  border-b-4 border-violet-800 md:w-[400px] w-[200px] md:text-left text-center mx-auto md:mx-2'>Projects</div>
+        <div className='md:max-w-[80%]  mx-auto py-4'>
+            <div className='block text-white text-2xl md:text-5xl font-bold leading-10 md:pb-4 p-2  border-b-4 border-violet-800 md:w-[360px] w-[200px] md:text-left text-center mx-auto md:mx-2'>Projects</div>
 
           
                 <div className='projects w-full p-8  flex md:justify-between items-start justify-center flex-wrap'>
                     {projectData.map((project, index) => (
-                        <div className='project md:w-[547px] w-[80%] h-[400px]  my-8 mx-2 py-14 flex flex-col justify-start items-star' key={project.name}>
+                        <div className='project md:w-[40%] w-[90%] h-[400px]  m-4 py-14 flex flex-col justify-start items-star' key={project.name}>
                             <a href={project.url}>
-                                <div className='relative md:h-[290px] md:w-[547px] h-[240px] w-[250px]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800' style={{ backgroundImage: `url(${project.image})` }}></div>
+                                <div className='relative h-[320px] md:w-[547px]  w-[100%]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800 ' style={{ backgroundImage: `url(${project.image})` }}></div>
                                 <h1 className='uppercase py-4 text-xl font-bold hover:text-violet-800'>{project.name}</h1>
                                 <div className='relative flex justify-start items-start'>
                                     {(project.tools).map((tool) => (
@@ -85,7 +85,7 @@ const Projects = () => {
                     }
                 </div>
             
-            <div className="md:max-w-[1800px]  h-px bg-white mx-auto mt-28 mb-8" />
+            <div className="md:max-w-[1800px]  h-[2px] bg-violet-800 mx-auto mt-28 mb-8" />
         </div>
 
     );
