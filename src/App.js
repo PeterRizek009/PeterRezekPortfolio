@@ -6,13 +6,13 @@ import Loading from './loading/loading';
 import Skills from './skills/skills';
 import Projects from './projects/projects';
 import Footer from './footer/footer';
+import WordWritingAnimation from './wirtingAnimation';
 
 
 
 
 function App() {
   const [showComponent, setShowComponent] = useState(false);
-
 
 
   useEffect(() => {
@@ -25,6 +25,8 @@ function App() {
     return () => clearTimeout(timeoutId);
   }, []);
 
+
+
   return (
     <>
       {
@@ -33,7 +35,14 @@ function App() {
 
           <div className="App bg-newBlack font-custom text-gray">
             <nav className='flex flex-wrap justify-between items-center py-5 md:max-w-[80%]  mx-auto'>
-              <h1 className='text-white md:font-bold md:text-4xl  text-xl border-b-4 border-violet-800 py-2 md:mx-2 mx-1'>PETER REZEIK</h1>
+             <WordWritingAnimation text="PETER REZEIK"  styleData="text-white md:font-bold md:text-4xl  text-xl border-b-4 border-violet-800 py-2 md:mx-2 mx-1"/>
+              
+             
+             
+             
+      
+              
+           
               <div className='icons flex justify-between'>
                 <a className='cursor-pointer mx-4' href='https://github.com/PeterRizek009'>
                   <BsGithub size={32} className='hover:text-violet-800' />

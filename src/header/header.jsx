@@ -18,7 +18,7 @@ const Header = () => {
 
             <div className="w-auto h-auto my-10 flex flex-col flex-wrap justify-between md:items-start items-center gap-[20px] mx-auto">
                 <div className="w-[300px]  md:w-auto  text-white md:text-[80px] text-[40px] font-bold">Nice to meet you! <br />I’m <span className='border-b-4 border-violet-800'>Peter Rezeik.</span> </div>
-                <p className="md:w-[800px] w-[300px]  h-auto text-zinc-300 text-lg font-medium leading-7 my-10">With extensive programming experience since age 9, I've cultivated a fervent passion for machine learning. Committed to continuous learning, I aspire to leverage my competencies in this field to eventually build my career.</p>
+                <p className="md:w-[800px] w-[300px]  h-auto text-zinc-300 text-lg font-medium leading-7 my-10">I'm a passionate front-end developer dedicated to creating visually stunning and user-friendly websites and with strong experience in turning designs into websites. With a strong foundation in HTML, CSS, and JavaScript, React JS, I blend creativity with technical expertise to craft engaging digital experiences that leave a lasting impression.</p>
             
 
             </div>
