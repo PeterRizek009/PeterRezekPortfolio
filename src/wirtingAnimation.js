@@ -8,7 +8,7 @@ const WordWritingAnimation = ({ text , styleData}) => {
     useEffect(() => {
         const typingInterval = setInterval(() => {
             if (currentIndex < text.length) {
-                setTypedText((prevText) => prevText + text[currentIndex]);
+                setTypedText((prevText) => prevText  + text[currentIndex] );
                 setCurrentIndex((prevIndex) => prevIndex + 1);
             } else {
                 clearInterval(typingInterval);
@@ -20,7 +20,7 @@ const WordWritingAnimation = ({ text , styleData}) => {
 
     return (
         <div className="word-writing-animation">
-            <span className={styleData}>{typedText}</span>
+            <span className={styleData}>{typedText} </span>
         </div>
     );
 };

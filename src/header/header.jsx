@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
     return (
 
-        <div className='header md:max-w-[80%]  mx-auto'>
+        <div className='header md:max-w-[80%] md:min-h-[700px] mx-auto'>
 
 
             <svg className="opacity-25 md:w-[530px] w-[350px] h-[129px] absolute left-0 top-[150px]">
@@ -28,7 +28,7 @@ const Header = () => {
                 <div className="Rectangle1  md:absolute top-56 left-[80%] w-32 h-32 bg-zinc-300 bg-opacity-0 border border-zinc-300" />
             </div>
 
-            <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-28 mb-8" />
+            <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-28" />
         </div>
     );
 }
