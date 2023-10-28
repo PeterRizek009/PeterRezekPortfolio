@@ -1,52 +1,45 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 
-const Modal = ({ message, show }) => {
+const Modal = () => {
 
-  console.log(message);
-    const[dispaly , setDisaply] =  useState(show);
+    
 
+    // useEffect(() => {
+    //     const delay = 3000; // Delay in milliseconds
 
-    useEffect(() => {
-        const delay = 3000; // Delay in milliseconds
+    //     const timeoutId = setTimeout(() => {
+    //         //setDisaply(false);
+    //     }, delay);
 
-        const timeoutId = setTimeout(() => {
-            setDisaply(false);
-        }, delay);
+    //     return () => clearTimeout(timeoutId);
+    // }, []);
 
-        return () => clearTimeout(timeoutId);
-    }, []);
-
-    const showHideClassName = dispaly ? "fixed top-0 inset-0 z-10 overflow-y-auto" : "hidden";
 
 
     return (
-        <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
-            <div className={showHideClassName}>
-                <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-
-                    <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                        <div className="bg-slate-500 px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                            <div className="flex flex-col justify-center items-center">
-                                <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                                    <svg className="h-6 w-6 text-violet-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                                    </svg>
-                                </div>
-                                <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                                    <div className="mt-2">
-                                        <p className="text-sm text-gray-500">{message}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+        <div class="relative mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3 text-center">
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-purple-100">
+                    <svg class="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlnx="http://www.w.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="text-lg leading-6 font-medium text-gray-900">Successfull</h3>
+                <div class="mt-2 px-7 py-3">
+                    <p class="text-sm text-gray-500">Account has been Successfull registered.</p>
+                </div>
+                <div class="items-center px-4 py-3">
+                    <button id="ok-btn"
+                        class="px-4 py-2 bg-purple-500 text-white 
+                        text-base font-medium rounded-md w-full 
+                        shadow-sm hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-300">
+                        OK
+                    </button>
                 </div>
             </div>
         </div>
-
-
     );
 }
 

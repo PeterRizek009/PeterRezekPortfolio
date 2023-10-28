@@ -82,8 +82,8 @@ const Skills = () => {
                     //     <div className="md:w-80 w-[140px] text-zinc-300 text-md font-medium leading-7">2 Years Experience</div>
                     // </div>
 
-                    <div class="xl:w-1/4 md:w-1/2 p-4 cursor-pointer">
-                        <div class="border border-gray-200 p-6 rounded-lg hover:border-violet-800 hover:scale-105">
+                    <div class="xl:w-1/4 md:w-1/2 w-1/2 p-4 cursor-pointer">
+                        <div class="border border-gray-200 p-6 rounded-lg hover:border-violet-800 hover:scale-105 shadow-md">
                             <div class="w-10 h-10  text-white  mb-4">
                                 {skill.icon}
                             </div>
