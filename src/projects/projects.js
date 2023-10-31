@@ -3,8 +3,9 @@ import news from './newsapp.png';
 import library from './library.png'
 import company from './landing.png'
 import transfer from './Transfer.jpg'
+import Modal from '../modal/modal';
 
-const Projects = ({ handleModal }) => {
+const Projects = ({ handleModal, dispaly, closeModal }) => {
 
 
     //const [index, setIndex] = useState(0)
@@ -62,7 +63,8 @@ const Projects = ({ handleModal }) => {
     // }
 
     return (
-        <div className='md:max-w-[80%]  mx-auto py-4'>
+        <div className='block relative md:max-w-[80%]  mx-auto py-4'>
+
             <div className='block text-white text-2xl md:text-5xl font-bold leading-10 md:pb-4 p-2  border-b-4 border-violet-800 md:w-[360px] w-[200px] md:text-left text-center mx-auto md:mx-2'>Projects</div>
 
 
@@ -94,7 +96,11 @@ const Projects = ({ handleModal }) => {
                 )
                 }
             </div>
-
+            {
+                dispaly && (
+                    <Modal closeModal={closeModal} />
+                )
+            }
             <div className="md:max-w-[1800px]  h-[2px] bg-violet-800 mx-auto mt-28 mb-8" />
         </div>
 

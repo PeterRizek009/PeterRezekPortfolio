@@ -8,7 +8,7 @@ import Projects from './projects/projects';
 import Footer from './footer/footer';
 import WordWritingAnimation from './wirtingAnimation';
 import ContactSection from './contact/contact';
-import Modal from './modal/modal';
+
 
 
 
@@ -30,6 +30,9 @@ function App() {
   const handleModal = () => {
     setDisaply(true);
   }
+  const closeModal = () => {
+    setDisaply(false);
+  }
 
 
 
@@ -39,7 +42,7 @@ function App() {
         showComponent === true ?
 
 
-          <div className="App bg-newBlack font-custom text-gray">
+          <div className="App bg-newBlack font-custom text-gray relative">
             <nav className='flex flex-wrap justify-between items-center py-5 md:max-w-[80%]  mx-auto'>
               <WordWritingAnimation text="PETER REZEIK" styleData="text-white md:font-bold md:text-4xl  text-xl border-b-4 border-violet-800 py-2 md:mx-2 mx-1" />
 
@@ -62,15 +65,7 @@ function App() {
 
             <Header />
             <Skills />
-            <div>
-              {
-                dispaly && (
-                  <Modal />
-                )
-              }
-              <Projects handleModal={handleModal} />
-
-            </div>
+            <Projects handleModal={handleModal} closeModal={closeModal} dispaly={dispaly} />
             <ContactSection />
             <Footer />
 
