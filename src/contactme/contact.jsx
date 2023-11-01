@@ -111,8 +111,6 @@ const Contact = () => {
             <button type='submit'
                 className='uppercase text-white text-base font-bold leading-relaxed mx-auto py-4 border-b-4
              border-violet-800 hover:border-green-400 hover:text-violet-800 w-[140px] mt-4'>Send message</button>
-
-
         </form>
 
 

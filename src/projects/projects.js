@@ -72,13 +72,11 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
                 {projectData.map((project, index) => (
                     <div className='project md:w-[40%] w-[90%] h-[400px]  m-4 py-14 flex flex-col justify-start items-star' key={project.name}>
                         <a href={project.url}>
-                            <div className='relative h-[320px] md:w-[547px]  w-[100%]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800 ' style={{ backgroundImage: `url(${project.image})` }}></div>
+                        <div className='relative h-[320px] md:w-[547px]  w-[100%]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800 ' style={{ backgroundImage: `url(${project.image})` }}></div>
                         </a>
-                        <div className='flex justify-between mt-3'>
-
+                        <div className='flex justify-between mt-3 max-w-[90%]'>
                             <div >
                                 <h1 className='uppercase  text-xl font-bold hover:text-violet-800'>{project.name}</h1>
-
                                 <div className='relative flex justify-start items-start'>
                                     {(project.tools).map((tool) => (
                                         <h3 className='uppercase me-2 text-sm'>{tool}</h3>
@@ -86,8 +84,8 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
 
                                 </div>
                             </div>
-                            <button className='bg-violet-800 text-white rounded-md px-2 max-h-[40px] text-base font-medium hover:bg-blue-600 
-                                  focus:outline-none focus:ring-2 focus:ring-green-300 shadow-md' onClick={handleModal}>Show case</button>
+                            <button className='bg-violet-800 text-white rounded-md px-2 max-h-[40px] text-base font-medium hover:bg-green-300 
+                              hover:text-black     focus:outline-none focus:ring-2 focus:ring-green-300 shadow-md' onClick={handleModal}>Show case</button>
                         </div>
 
 
