@@ -84,8 +84,8 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
 
                                 </div>
                             </div>
-                            <button className='bg-violet-800 text-white rounded-md px-2 max-h-[40px] text-base font-medium hover:bg-green-300 
-                              hover:text-black     focus:outline-none focus:ring-2 focus:ring-green-300 shadow-md' onClick={handleModal}>Show case</button>
+                            {/* <button className='bg-violet-800 text-white rounded-md px-2 max-h-[40px] text-base font-medium hover:bg-green-300 
+                              hover:text-black     focus:outline-none focus:ring-2 focus:ring-green-300 shadow-md' onClick={handleModal}>Show case</button> */}
                         </div>
 
 

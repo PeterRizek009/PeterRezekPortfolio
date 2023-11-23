@@ -11,9 +11,8 @@ import ContactSection from './contact/contact';
 
 
 
-
-
-function App() {
+function App() 
+{
   const [showComponent, setShowComponent] = useState(false);
   const [dispaly, setDisaply] = useState(false);
 
