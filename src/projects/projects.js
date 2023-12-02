@@ -50,9 +50,9 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
         },
         {
             image: transfer,
-            url: 'https://footballtransfermarkets-app.netlify.app/',
-            name: 'football transfers web app',
-            tools: ['HTML', 'CSS', 'Bootstrap', 'React JS']
+            url: 'https://peterrizek009.github.io/',
+            name: 'E-commerce Web Application with Redux ',
+            tools: ['HTML', 'Tailwind CSS', 'React JS' , 'Redux']
         },
 
     ]

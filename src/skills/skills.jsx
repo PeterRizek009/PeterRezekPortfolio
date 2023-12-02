@@ -27,49 +27,49 @@ const Skills = () => {
         {
             name: 'Bootstrap',
             icon: <BiLogoBootstrap color='indigo' size={33} />,
-            text :'Experienced in Bootstrap,with completed numerous projects using Bootstrap.'
+            text :'Experienced in Bootstrap,with completed  projects using Bootstrap.'
         },
         {
             name: 'TailwindCSS',
             icon: <BiLogoTailwindCss color='lightblue' size={35} />,
-            text :'Proficient and experienced in HTML, with a solid track record in web development'
+            text :'Experienced and Proficient in Tailwind CSS, applied in multiple projects.'
         },
         {
             name: 'Figma ',
             icon: <BiLogoFigma color='pink' size={35} />,
-            text :'Proficient and experienced in HTML, with a solid track record in web development'
+            text :'I have successfully translated numerous Figma designs into pixel-perfect projects'
         },
         {
             name: 'JavaScript',
             icon: <BiLogoJavascript color='yellow' size={35} />,
-            text :'Proficient and experienced in HTML, with a solid track record in web development'
+            text :'Proficient and experienced in JavaScript '
 
         },
         {
             name: 'TypeScript',
             icon: <BiLogoTypescript color='blue' size={35} />,
-            text :'Proficient and experienced in HTML, with a solid track record in web development'
+            text :'I am currently at an entry level in TypeScript and making notable progress in my learning journey.'
 
         },
         {
             name: 'React',
             icon: <BiLogoReact color='lightblue' size={35} />,
-            text :'Proficient and experienced in HTML, with a solid track record in web development'
+            text :'Proficient and experienced in React JS , applied in multiple projects.'
         },
         {
             name: 'Redux',
             icon: <BiLogoRedux color='lightblue' size={35} />,
-            text :'Proficient and experienced in HTML, with a solid track record in web development'
+            text :'I possess strong knowledge in Redux technology, with practical application demonstrated in projects'
         },
         {
             name: 'Next JS',
             icon: <SiNextdotjs color='lightblue' size={35} />,
-            text :'Proficient and experienced in HTML, with a solid track record in web development'
+            text :'I am currently at an entry level in Next Js  and making notable progress in my learning journey.'
         },
         {
             name: 'Git & Github',
             icon: <BiLogoGithub color='gray' size={35} />,
-            text :'Proficient and experienced in HTML, with a solid track record in web development'
+            text :'Proficient and experienced in GitHub '
         },
     ]
     return (
