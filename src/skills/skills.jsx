@@ -69,7 +69,7 @@ const Skills = () => {
         {
             name: 'Git & Github',
             icon: <BiLogoGithub color='gray' size={35} />,
-            text :'Proficient and experienced in GitHub '
+            text :'Proficient and experienced in GitHub & Git '
         },
     ]
     return (
