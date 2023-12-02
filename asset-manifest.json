@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PeterRezekPortfolio/static/css/main.859b7b8c.css",
-    "main.js": "/PeterRezekPortfolio/static/js/main.b986af06.js",
+    "main.js": "/PeterRezekPortfolio/static/js/main.6f5c7d42.js",
     "static/js/787.d18725d0.chunk.js": "/PeterRezekPortfolio/static/js/787.d18725d0.chunk.js",
     "static/media/newsapp.png": "/PeterRezekPortfolio/static/media/newsapp.55b072437a59b777fd9a.png",
     "static/media/library.png": "/PeterRezekPortfolio/static/media/library.6571363834d9d12c93be.png",
@@ -9,11 +9,11 @@
     "static/media/landing.png": "/PeterRezekPortfolio/static/media/landing.5dd0b04a9305cff3d550.png",
     "index.html": "/PeterRezekPortfolio/index.html",
     "main.859b7b8c.css.map": "/PeterRezekPortfolio/static/css/main.859b7b8c.css.map",
-    "main.b986af06.js.map": "/PeterRezekPortfolio/static/js/main.b986af06.js.map",
+    "main.6f5c7d42.js.map": "/PeterRezekPortfolio/static/js/main.6f5c7d42.js.map",
     "787.d18725d0.chunk.js.map": "/PeterRezekPortfolio/static/js/787.d18725d0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.859b7b8c.css",
-    "static/js/main.b986af06.js"
+    "static/js/main.6f5c7d42.js"
   ]
 }
