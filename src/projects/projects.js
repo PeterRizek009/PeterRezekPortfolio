@@ -2,7 +2,7 @@ import React from 'react';
 import news from './newsapp.png';
 import library from './library.png'
 import company from './landing.png'
-import transfer from './Transfer.jpg'
+import ecommece from './Ecommercewithredux.PNG'
 import Modal from '../modal/modal';
 
 const Projects = ({ handleModal, dispaly, closeModal }) => {
@@ -33,26 +33,26 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
             image: news,
             url: 'https://thetodaynews.netlify.app/',
             name: 'News Web APP',
-            tools: ['HTML', 'Tailwind CSS', 'React JS']
+            tools: ['HTML', 'Tailwind CSS', 'React JS', 'Responsive design']
 
         },
         {
             image: library,
             url: 'https://books-ecommerceapp.netlify.app/',
             name: 'Books store web app',
-            tools: ['HTML', 'CSS', 'Bootstrap', 'React JS']
+            tools: ['HTML', 'CSS', 'Bootstrap', 'React JS', 'Responsive design']
         },
         {
             image: company,
             url: 'https://companylanpgtemplate.netlify.app/',
-            name: 'Company Landing page',
-            tools: ['HTML', 'Tailwind CSS', 'React JS']
+            name: 'Lamdung Page',
+            tools: ['HTML', 'Tailwind CSS', 'React JS', 'Responsive design']
         },
         {
-            image: transfer,
-            url: 'https://peterrizek009.github.io/',
+            image: ecommece,
+            url: 'https://peterrizek009.github.io/ecommerce-redux',
             name: 'E-commerce Web Application with Redux ',
-            tools: ['HTML', 'Tailwind CSS', 'React JS' , 'Redux']
+            tools: ['HTML', 'Tailwind CSS', 'React JS', 'Redux', 'Responsive design']
         },
 
     ]
@@ -72,7 +72,7 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
                 {projectData.map((project, index) => (
                     <div className='project md:w-[40%] w-[90%] h-[400px]  m-4 py-14 flex flex-col justify-start items-star' key={project.name}>
                         <a href={project.url}>
-                        <div className='relative h-[320px] md:w-[547px]  w-[100%]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800 ' style={{ backgroundImage: `url(${project.image})` }}></div>
+                            <div className='relative h-[320px] md:w-[547px]  w-[100%]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800 ' style={{ backgroundImage: `url(${project.image})` }}></div>
                         </a>
                         <div className='flex justify-between mt-3 max-w-[90%]'>
                             <div >
