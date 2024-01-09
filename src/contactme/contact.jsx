@@ -89,7 +89,7 @@ const Contact = () => {
 
 
     return (
-        <form onSubmit={handleSubmit} className='flex flex-col justify-between items-end md:mt-0 md:w-[600px] w-[full] mt-10'>
+        <form onSubmit={handleSubmit} className='flex flex-col justify-between items-end lg:mt-0 lg:w-[600px] w-[80%] mt-10'>
 
             {renderErrors(errors.error_from_name)}
             <input type='text' name='from_name' placeholder='NAME'

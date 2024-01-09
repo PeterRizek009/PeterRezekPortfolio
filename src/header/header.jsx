@@ -4,10 +4,10 @@ import React from 'react';
 const Header = () => {
     return (
 
-        <div className='header w-[80%] md:min-h-[700px] mx-auto'>
+        <div className='header max-w-[80%] md:min-h-[700px] mx-auto'>
 
 
-            <svg className="opacity-25 md:w-[530px] w-[350px] h-[129px] absolute left-0 top-[150px]">
+            <svg className="opacity-25 md:w-[530px] w-[320px] h-[129px] absolute left-0 top-[150px]">
                 <ellipse cx="15%" cy="35%" rx="48%" ry="35%" fill="none" stroke="white" strokeWidth="1" />
                 <ellipse cx="15%" cy="42%" rx="48%" ry="35%" fill="none" stroke="white" strokeWidth="1" />
                 <ellipse cx="15%" cy="50%" rx="48%" ry="35%" fill="none" stroke="white" strokeWidth="1" />
@@ -16,11 +16,10 @@ const Header = () => {
             </svg>
 
 
-            <div className="my-10 flex flex-col flex-wrap justify-between md:items-start items-center gap-[20px] mx-8">
-                <div className="w-[300px]  md:w-auto  text-white md:text-[80px] text-[40px] font-bold">Nice to meet you! <br />I’m <span className='border-b-4 border-violet-800'>Peter Rezeik.</span> </div>
-                <p className="md:w-[800px] w-[300px]  h-auto text-zinc-300 text-lg font-medium leading-7 my-10">I'm a passionate front-end developer dedicated to creating visually stunning and user-friendly websites and with strong experience in turning designs into websites. With a strong foundation in HTML, CSS, and JavaScript, React JS, I blend creativity with technical expertise to craft engaging digital experiences that leave a lasting impression.</p>
-            
-
+            <div className="w-auto h-auto my-10 flex flex-col flex-wrap justify-between md:items-start items-center gap-[20px] mx-auto">
+                <div className="w-[280px]  md:w-auto  text-white md:text-[80px] text-[30px] font-bold">Nice to meet you! <br />I’m <span className='border-b-4 border-violet-800'>Peter Rezeik.</span> </div>
+                <p className="md:w-[700px] w-[300px]  h-auto text-zinc-300 text-lg font-medium leading-7 my-10">I'm a passionate front-end developer dedicated to creating visually stunning and user-friendly websites and with strong experience in turning designs into websites. With a strong foundation in HTML, CSS, and JavaScript, React JS, I blend creativity with technical expertise to craft engaging digital experiences that leave a lasting impression.</p>
+        
             </div>
 
             <div className='md:block hidden'>
