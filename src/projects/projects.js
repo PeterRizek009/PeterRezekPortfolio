@@ -69,17 +69,17 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
 
 
             <div className='projects w-full p-8  flex md:justify-between items-start justify-center flex-wrap'>
-                {projectData.map((project, index) => (
-                    <div className='project md:w-[40%] w-[90%] h-[400px]  m-4 py-14 flex flex-col justify-start items-star' key={project.name}>
+                {projectData.map((project) => (
+                    <div className='project xl:w-[40%] w-[80%] h-[400px]  m-4 py-14 flex flex-col justify-start items-start' key={project.name}>
                         <a href={project.url}>
-                            <div className='relative h-[320px] md:w-[547px]  w-[100%]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800 ' style={{ backgroundImage: `url(${project.image})` }}></div>
+                            <div className='block h-[320px] lg:w-[500px]  min-w-[380px]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800 ' style={{ backgroundImage: `url(${project.image})` }}></div>
                         </a>
-                        <div className='flex justify-between mt-3 max-w-[90%]'>
+                        <div className='flex justify-between mt-3 w-full'>
                             <div >
-                                <h1 className='uppercase  text-xl font-bold hover:text-violet-800'>{project.name}</h1>
-                                <div className='relative flex justify-start items-start'>
+                                <h1 className='uppercase  text-xl font-bold text-indigo-200 hover:text-violet-800'>{project.name}</h1>
+                                <div className='relative flex justify-start items-start flex-wrap'>
                                     {(project.tools).map((tool) => (
-                                        <h3 className='uppercase me-2 text-sm'>{tool}</h3>
+                                        <h3 className='uppercase me-4 text-sm'>{tool}</h3>
                                     ))}
 
                                 </div>
