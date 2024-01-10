@@ -68,11 +68,11 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
             <div className='block text-white text-2xl md:text-5xl font-bold leading-10 md:pb-4 p-2  border-b-4 border-violet-800 md:w-[360px] w-[200px] md:text-left text-center mx-auto md:mx-2'>Projects</div>
 
 
-            <div className='projects w-full p-8  flex  md:justify-between justify-center flex-wrap'>
+            <div className='projects w-full md:p-8 flex md:justify-between justify-start flex-wrap'>
                 {projectData.map((project) => (
-                    <div className='project xl:w-[40%] lg:w-[50%] h-[400px]  m-4 py-14 flex flex-col' key={project.name}>
+                    <div className='project xl:w-[40%] lg:w-[50%] w-full h-[400px]  m-4 py-14 flex flex-col' key={project.name}>
                         <a href={project.url}>
-                            <div className='block md:w-[547px] md:h-[300px] w-[300px] h-[250px]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800' style={{ backgroundImage: `url(${project.image})` }}></div>
+                            <div className='block md:w-[547px] md:h-[300px] w-full h-[250px]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800' style={{ backgroundImage: `url(${project.image})` }}></div>
                         </a>
                         <div className='flex justify-between mt-3 w-full'>
                             <div >

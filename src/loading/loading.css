@@ -97,3 +97,16 @@
     opacity: 0;
   }
 }
+
+@media (min-width: 768px) {
+  .loading-text {
+    font-size: 8vw;
+  }
+
+  .loading-container {
+    &:before {
+      width: 75%;
+      height: 4px;
+    }
+  }
+}
