@@ -68,7 +68,7 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
             <div className='block text-white text-2xl md:text-5xl font-bold leading-10 md:pb-4 p-2  border-b-4 border-violet-800 md:w-[360px] w-[200px] md:text-left text-center mx-auto md:mx-2'>Projects</div>
 
 
-            <div className='projects w-full p-8  flex justify-between flex-wrap'>
+            <div className='projects w-full p-8  flex  md:justify-between justify-center flex-wrap'>
                 {projectData.map((project) => (
                     <div className='project xl:w-[40%] lg:w-[50%] h-[400px]  m-4 py-14 flex flex-col' key={project.name}>
                         <a href={project.url}>
