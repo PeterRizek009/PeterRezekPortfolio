@@ -65,7 +65,7 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
     return (
         <div className='block relative w-[80%] mx-auto py-4'>
 
-            <div className='block text-white text-2xl md:text-5xl font-bold leading-10 md:pb-4 p-2  border-b-4 border-violet-800 md:w-[360px] w-[200px] md:text-left text-center mx-auto md:mx-2'>Projects</div>
+            <div className='title'>Projects</div>
 
 
             <div className='projects w-full md:p-8 flex md:justify-between justify-start flex-wrap'>

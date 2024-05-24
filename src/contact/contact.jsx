@@ -4,12 +4,15 @@ import Contact from '../contactme/contact';
 
 const ContactSection = () => {
     return (
-        <div className='flex flex-col md:flex-row justify-between items-center md:items-start md:max-w-[80%] mx-auto flex-wrap '>
-            <div className='content flex flex-col md:justify-start justify-between items-center flex-wrap lg:w-[40%] w-[80%] '>
-                <div className='block text-white text-2xl md:text-5xl font-bold leading-10 md:pb-4 p-2  border-b-4 border-violet-800 md:w-[400px] w-[80%] md:text-left text-center mx-auto md:mx-2'>Contact me</div>
-                <p className='my-8 w-[90%]'>I would like to hear about your project and how I could help you. Please fill in the form, and I’ll get back to you as soon as possible.</p>
+   
+            <div className='flex flex-col md:flex-row justify-between items-center md:items-start md:max-w-[80%] mx-auto flex-wrap '>
+                <div className='content flex flex-col md:justify-start justify-between items-center flex-wrap lg:w-[40%] w-[90%] '>
+                    <div className='title'>Contact me</div>
+                    <p className='my-8 w-[90%]'>I would like to hear about your project and how I could help you. Please fill in the form, and I’ll get back to you as soon as possible.</p>
+                </div>
+                <div className='border border-gray-200 rounded-lg hover:border-violet-800  p-8 h-full shadow-md md:w-[60%] w-[80%] '>
+                <Contact />
             </div>
-            <Contact />
         </div>
     );
 }

@@ -3,109 +3,94 @@ import { AiFillHtml5 } from 'react-icons/ai'
 import {
     BiLogoCss3, BiLogoTailwindCss, BiLogoBootstrap,
     BiLogoJavascript, BiLogoReact, BiLogoTypescript,
-    BiLogoRedux, BiLogoGithub , BiLogoFigma
+    BiLogoRedux, BiLogoGithub, BiLogoFigma, BiLogoMongodb
 } from 'react-icons/bi'
 
-import { SiNextdotjs } from 'react-icons/si'
+import { SiNextdotjs, SiExpress } from 'react-icons/si'
+import CustomSVG from '../components/circleSVG';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { NextArrow, PrevArrow } from '../components/customArrows/customArrows';
+
 
 
 const Skills = () => {
 
     const skills = [
-        {
-            name: 'HTML',
-            icon: <AiFillHtml5 color='orange' size={33} />,
-            text :'Proficient and experienced in HTML, with a solid track record in web development'
+        <AiFillHtml5 color='gray' size={70} />,
+        <BiLogoCss3 color='gray' size={70} />,
+        <BiLogoBootstrap color='gray' size={70} />,
+        <BiLogoTailwindCss color='gray' size={70} />,
+        <BiLogoFigma color='gray' size={70} />,
+        <BiLogoJavascript color='gray' size={70} />,
+        <BiLogoTypescript color='gray' size={70} />,
+        <BiLogoReact color='gray' size={70} />,
+        <BiLogoRedux color='gray' size={70} />,
+        <BiLogoMongodb color='gray' size={70} />,
+        <SiExpress color='gray' size={70} />,
+        <SiNextdotjs color='gray' size={70} />,
+        <BiLogoGithub color='gray' size={70} />
 
-        },
-        {
-            name: 'CSS',
-            icon: <BiLogoCss3 color='blue' size={33} />,
-               text :'Skilled and knowledgeable in  CSS, with substantial expertise in responsive design'
-
-        },
-        {
-            name: 'Bootstrap',
-            icon: <BiLogoBootstrap color='indigo' size={33} />,
-            text :'Experienced in Bootstrap,with completed  projects using Bootstrap.'
-        },
-        {
-            name: 'TailwindCSS',
-            icon: <BiLogoTailwindCss color='lightblue' size={35} />,
-            text :'Experienced and Proficient in Tailwind CSS, applied in multiple projects.'
-        },
-        {
-            name: 'Figma ',
-            icon: <BiLogoFigma color='pink' size={35} />,
-            text :'I have successfully translated numerous Figma designs into pixel-perfect projects'
-        },
-        {
-            name: 'JavaScript',
-            icon: <BiLogoJavascript color='yellow' size={35} />,
-            text :'Proficient and experienced in JavaScript '
-
-        },
-        {
-            name: 'TypeScript',
-            icon: <BiLogoTypescript color='blue' size={35} />,
-            text :'I am currently at an entry level in TypeScript and making notable progress in my learning journey.'
-
-        },
-        {
-            name: 'React',
-            icon: <BiLogoReact color='lightblue' size={35} />,
-            text :'Proficient and experienced in React JS , applied in multiple projects.'
-        },
-        {
-            name: 'Redux',
-            icon: <BiLogoRedux color='lightblue' size={35} />,
-            text :'I possess strong knowledge in Redux technology, with practical application demonstrated in projects'
-        },
-        {
-            name: 'Next JS',
-            icon: <SiNextdotjs color='lightblue' size={35} />,
-            text :'I am currently at an entry level in Next Js  and making notable progress in my learning journey.'
-        },
-        {
-            name: 'Git & Github',
-            icon: <BiLogoGithub color='gray' size={35} />,
-            text :'Proficient and experienced in GitHub & Git '
-        },
     ]
+
+
+    const settings = {
+        infinite: true,
+        speed: 700,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    initialSlide: 2,
+                    
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                  
+                }
+            }
+        ]
+    };
+
+
     return (
-        <div className='md:max-w-[80%]   mx-auto py-4'>
-            <div className='block text-white text-2xl md:text-5xl font-bold leading-10 md:pb-4 p-2  border-b-4 border-violet-800 md:w-[400px] w-[200px] mx-auto md:mx-2'>Technical Skills</div>
-            <div className='flex w-full justify-between items-center flex-wrap mt-8'>
-                {skills.map((skill) =>
-                    // <div className="skill md:w-80 w-[140px] mx-2 h-auto mt-8 py-8 flex-col justify-center md:items-start items-center  md:gap-3.5" key={el.name}>
-                    //     <div className="text-white text-2xl md:text-5xl font-bold leading-10">{el.name}</div>
-                    //     <div className="md:w-80 w-[140px] text-zinc-300 text-md font-medium leading-7">2 Years Experience</div>
-                    // </div>
+        <div className='md:max-w-[80%] mx-auto py-4'>
+            <div className='title'>Coding skills</div>
 
-                    <div class="xl:w-1/4 md:w-1/2 w-1/2 p-4 cursor-pointer">
-                        <div class="border border-gray-200 p-6 rounded-lg hover:border-violet-800 hover:scale-105 shadow-md">
-                            <div class="w-10 h-10  text-white  mb-4">
-                                {skill.icon}
-                            </div>
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-2">{skill.name}</h2>
-                            <p class="leading-relaxed text-base">{skill.text}</p>
+            <div className='my-8'>
+                <Slider {...settings}>
+                    {skills.map((skill, index) =>
+                        <div key={index} className="py-8 px-2">
+                            {skill}
                         </div>
-                    </div>
-                )}
 
+                    )}
+                </Slider>
             </div>
-
-            <svg className="opacity-25 md:w-[530px] w-[350px] h-[129px] absolute right-0 top-[800px]">
-                <ellipse cx="80%" cy="35%" rx="48%" ry="35%" fill="none" stroke="white" strokeWidth="1" />
-                <ellipse cx="80%" cy="42%" rx="48%" ry="35%" fill="none" stroke="white" strokeWidth="1" />
-                <ellipse cx="80%" cy="50%" rx="48%" ry="35%" fill="none" stroke="white" strokeWidth="1" />
-                <ellipse cx="80%" cy="58%" rx="48%" ry="35%" fill="none" stroke="white" strokeWidth="1" />
-                <ellipse cx="80%" cy="63%" rx="48%" ry="35%" fill="none" stroke="white" strokeWidth="1" />
-                <ellipse cx="80%" cy="65%" rx="48%" ry="35%" fill="none" stroke="white" strokeWidth="1" />
-            </svg>
+            <CustomSVG HorizPos={`right-0`} VertiPos={`top-[800px]`} leftSVG={true} />
 
 
-            <div className="md:max-w-[1800px]  h-px bg-white mx-auto mt-28 mb-8" />
+            <div className="md:max-w-[1800px]  h-px dark:bg-white bg-newBlack mx-auto mt-28 mb-8" />
         </div>
     );
 

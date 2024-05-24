@@ -18,7 +18,7 @@ const Footer = () => {
 
 
 
-      <div className="md:max-w-[1600px] h-px bg-white mx-auto mt-28 mb-8" />
+      <div className="md:max-w-[1600px] h-px dark:bg-white mx-auto mt-28 mb-8" />
 
 
       {/* <nav className='flex flex-wrap justify-between items-center py-5 md:max-w-[1600px] mx-auto'>
