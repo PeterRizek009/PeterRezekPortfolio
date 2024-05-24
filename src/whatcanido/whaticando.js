@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { AiFillHtml5 } from 'react-icons/ai';
-import { BiLogoCss3, BiLogoTailwindCss, BiLogoReact } from 'react-icons/bi';
+import {  BiLogoReact } from 'react-icons/bi';
 import { BsDatabase } from 'react-icons/bs'
 import { MdWeb } from "react-icons/md";
 
