@@ -17,28 +17,30 @@ import { NextArrow, PrevArrow } from '../components/customArrows/customArrows';
 
 const Skills = () => {
 
+    const size =  80;
+
     const skills = [
-        <AiFillHtml5 color='gray' size={70} />,
-        <BiLogoCss3 color='gray' size={70} />,
-        <BiLogoBootstrap color='gray' size={70} />,
-        <BiLogoTailwindCss color='gray' size={70} />,
-        <BiLogoFigma color='gray' size={70} />,
-        <BiLogoJavascript color='gray' size={70} />,
-        <BiLogoTypescript color='gray' size={70} />,
-        <BiLogoReact color='gray' size={70} />,
-        <BiLogoRedux color='gray' size={70} />,
-        <BiLogoMongodb color='gray' size={70} />,
-        <SiExpress color='gray' size={70} />,
-        <SiNextdotjs color='gray' size={70} />,
-        <BiLogoGithub color='gray' size={70} />
+        <AiFillHtml5 color='orange' size={size} />,
+        <BiLogoCss3 color='lightblue' size={size} />,
+        <BiLogoBootstrap color='purple' size={size} />,
+        <BiLogoTailwindCss color='lightblue' size={size} />,
+        <BiLogoFigma color='pink' size={size} />,
+        <BiLogoJavascript color='yellow' size={size} />,
+        // <BiLogoTypescript color='gray' size={size} />,
+        <BiLogoReact color='lightblue' size={size} />,
+        <BiLogoRedux color='lightpurple' size={size} />,
+        <BiLogoMongodb color='green' size={size} />,
+        <SiExpress color='lightyellow' size={size} />,
+        // <SiNextdotjs color='gray' size={size} />,
+        <BiLogoGithub color='white'  size={size} />
 
     ]
 
 
     const settings = {
         infinite: true,
-        speed: 700,
-        slidesToShow: 7,
+        speed: 1000,
+        slidesToShow: 6,
         slidesToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
@@ -77,10 +79,10 @@ const Skills = () => {
         <div className='md:max-w-[80%] mx-auto py-4'>
             <div className='title'>Coding skills</div>
 
-            <div className='my-8'>
+            <div className='mx-10 my-4'>
                 <Slider {...settings}>
                     {skills.map((skill, index) =>
-                        <div key={index} className="py-8 px-2">
+                        <div key={index} className="py-8 px-1">
                             {skill}
                         </div>
 

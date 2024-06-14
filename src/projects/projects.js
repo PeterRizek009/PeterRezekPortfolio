@@ -1,13 +1,18 @@
-import React from 'react';
+import React ,  {useMemo} from 'react';
 import news from './newsapp.png';
 import library from './library.png'
 import company from './landing.png'
 import ecommece from './Ecommercewithredux.PNG'
 import Modal from '../modal/modal';
+import { motion } from "framer-motion";
+import getScrollAnimation from "../utils/getScrollAnimation";
+import ScrollAnimationWrapper from "../Layouts/ScrollAnimationWrapper";
 
 const Projects = ({ handleModal, dispaly, closeModal }) => {
 
+    const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
+   
     //const [index, setIndex] = useState(0)
 
     // const [width, setWidth] = useState(1400);
@@ -67,10 +72,10 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
 
             <div className='title'>Projects</div>
 
-
-            <div className='projects w-full md:p-8 flex md:justify-between justify-start flex-wrap'>
+            <ScrollAnimationWrapper>
+            <div className='projects w-full md:p-8 flex md:justify-between justify-start flex-wrap' >
                 {projectData.map((project) => (
-                    <div className='project xl:w-[40%] lg:w-[50%] w-full h-[400px]  m-4 py-14 flex flex-col' key={project.name}>
+                    <motion.div className='project xl:w-[40%] lg:w-[50%] w-full h-[400px]  m-4 py-14 flex flex-col' key={project.name}  variants={scrollAnimation}>
                         <a href={project.url}>
                             <div className='block md:w-[547px] md:h-[300px] w-full h-[250px]  bg-cover bg-center shadow-sm rounded-sm hover:drop-shadow-lg hover:shadow-violet-800' style={{ backgroundImage: `url(${project.image})` }}></div>
                         </a>
@@ -89,11 +94,12 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
                         </div>
 
 
-                    </div>
+                    </motion.div>
                 )
                 )
                 }
             </div>
+            </ScrollAnimationWrapper>
             {
                 dispaly && (
                     <Modal closeModal={closeModal} />
