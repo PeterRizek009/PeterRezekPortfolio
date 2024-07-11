@@ -3,6 +3,7 @@ import news from './newsapp.png';
 import library from './library.png'
 import company from './landing.png'
 import ecommece from './Ecommercewithredux.PNG'
+import career from './career.PNG'
 import Modal from '../modal/modal';
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
@@ -59,13 +60,16 @@ const Projects = ({ handleModal, dispaly, closeModal }) => {
             name: 'E-commerce Web Application with Redux ',
             tools: ['HTML', 'Tailwind CSS', 'React JS', 'Redux', 'Responsive design']
         },
+        {
+            image: career,
+            url: 'https://www.youtube.com/watch?v=ZJXpM-DohW0',
+            name: 'MERN STACK App  ',
+            tools: ['HTML', 'Tailwind CSS', 'React JS', 'Express JS', 'MongoDB']
+        },
 
     ]
 
-    // const handleOnDragStart = () => {
-    //     index === projectData.length - 1 ? setIndex(0) : setIndex(index + 1)
-
-    // }
+  
 
     return (
         <div className='block relative w-[80%] mx-auto py-4'>
