@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/PeterRezekPortfolio/static/css/main.f9869e77.css",
-    "main.js": "/PeterRezekPortfolio/static/js/main.f1532988.js",
+    "main.js": "/PeterRezekPortfolio/static/js/main.6b57da16.js",
     "static/js/787.bcd50fda.chunk.js": "/PeterRezekPortfolio/static/js/787.bcd50fda.chunk.js",
     "static/media/newsapp.png": "/PeterRezekPortfolio/static/media/newsapp.55b072437a59b777fd9a.png",
     "static/media/library.png": "/PeterRezekPortfolio/static/media/library.6571363834d9d12c93be.png",
     "static/media/Ecommercewithredux.PNG": "/PeterRezekPortfolio/static/media/Ecommercewithredux.335551cbc31e6a654e8c.PNG",
+    "static/media/career.PNG": "/PeterRezekPortfolio/static/media/career.2c5eee16a5ff47d3ba0d.PNG",
     "static/media/landing.png": "/PeterRezekPortfolio/static/media/landing.5dd0b04a9305cff3d550.png",
     "static/media/slick.svg": "/PeterRezekPortfolio/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/PeterRezekPortfolio/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -13,11 +14,11 @@
     "static/media/slick.woff": "/PeterRezekPortfolio/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/PeterRezekPortfolio/index.html",
     "main.f9869e77.css.map": "/PeterRezekPortfolio/static/css/main.f9869e77.css.map",
-    "main.f1532988.js.map": "/PeterRezekPortfolio/static/js/main.f1532988.js.map",
+    "main.6b57da16.js.map": "/PeterRezekPortfolio/static/js/main.6b57da16.js.map",
     "787.bcd50fda.chunk.js.map": "/PeterRezekPortfolio/static/js/787.bcd50fda.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f9869e77.css",
-    "static/js/main.f1532988.js"
+    "static/js/main.6b57da16.js"
   ]
 }
