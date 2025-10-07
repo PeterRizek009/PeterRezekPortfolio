@@ -1,27 +1,33 @@
 import React, { useMemo } from 'react';
-import CustomSVG from '../components/circleSVG';
 
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "../Layouts/ScrollAnimationWrapper";
 import { motion } from "framer-motion";
+import CustomSVG from '../components/CustomSVG';
 
 const Header = () => {
 
 
     const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
+
+const aboutme = `I’m passionate about technology and coding, with a solid background in programming, IT support, and system administration. 
+I enjoy learning new tools, solving problems, and building user-friendly websites using modern front-end technologies like React and Tailwind CSS.`;
+
+
+
     return (
 
         <div className='header max-w-[80%] h-auto mx-auto'>
 
 
-            <CustomSVG HorizPos={`left-0`} VertiPos={`top-[150px]`} leftSVG={false} />
+            <CustomSVG HorizPos={`left-0`} VertiPos={`top-[150px]`} leftSVG={false} /> 
 
             <ScrollAnimationWrapper>
                 <motion.div variants={scrollAnimation}>
                     <div className="w-auto h-auto my-10 flex flex-col flex-wrap justify-between md:items-start items-center gap-[20px] mx-auto">
-                        <div className="w-[280px]  md:w-auto  dark:text-white md:text-[80px] text-[30px] font-bold">Nice to meet you! <br />I’m <span className='border-b-4 border-violet-800'>Peter Rezeik.</span> </div>
-                        <p className="md:w-[700px] w-[300px]  h-auto dark:text-zinc-300 text-lg font-medium leading-7 my-10">I'm a passionate front-end developer dedicated to creating visually stunning and user-friendly websites and with strong experience in turning designs into websites. With a strong foundation in HTML, CSS, and JavaScript, React JS, I blend creativity with technical expertise to craft engaging digital experiences that leave a lasting impression.</p>
+                        <div className="w-[280px]  md:w-auto  dark:text-white md:text-[70px] text-[30px] font-bold">Nice to meet you! <br />I’m <span className='border-b-4 border-violet-800'>Peter Rezeik.</span> </div>
+                        <p className="md:w-[700px] w-[300px]  h-auto dark:text-zinc-300 text-lg font-medium leading-7 my-10">{aboutme}</p>
 
                     </div>
 
@@ -32,8 +38,7 @@ const Header = () => {
                     </div>
                 </motion.div>
             </ScrollAnimationWrapper>
-            <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-28" />
-
+              <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-28" />
         </div>
     );
 }

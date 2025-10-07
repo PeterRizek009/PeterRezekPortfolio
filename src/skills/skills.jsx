@@ -2,11 +2,11 @@ import React from 'react';
 import { AiFillHtml5 } from 'react-icons/ai'
 import {
     BiLogoCss3, BiLogoTailwindCss, BiLogoBootstrap,
-    BiLogoJavascript, BiLogoReact, BiLogoTypescript,
+    BiLogoJavascript, BiLogoReact, 
     BiLogoRedux, BiLogoGithub, BiLogoFigma, BiLogoMongodb
 } from 'react-icons/bi'
 
-import { SiNextdotjs, SiExpress } from 'react-icons/si'
+import { SiExpress } from 'react-icons/si'
 import CustomSVG from '../components/circleSVG';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";

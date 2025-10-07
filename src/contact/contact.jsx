@@ -1,26 +1,46 @@
+import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
-import Contact from '../contactme/contact';
+export default function ContactSection() {
+  return (
+  
+        <div className='md:max-w-[80%] mx-auto'>
+            <div className='title'>Contact Me</div>
 
-import React from 'react';
+      <div className="flex flex-col justify-center items-center mx-auto text-center my-6">
+        
 
-const ContactSection = () => {
+        <p className="text-gray-300 mb-8 w-[90%]">
+          I would like to hear about your project and how I could help you.  
+          Feel free to reach out to me directly through WhatsApp or LinkedIn 👇
+        </p>
 
   
+        <div className="flex flex-wrap gap-6 justify-center">
+  
+          <a
+            href="https://wa.me/+971504858376" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-green-500 transition-all"
+          >
+            <FaWhatsapp size={22} />
+            WhatsApp
+          </a>
 
-    return (
-   
-            <div className='flex flex-col md:flex-row justify-between items-center md:items-start md:max-w-[80%] mx-auto flex-wrap '>
-                <div className='content flex flex-col md:justify-start justify-between items-center flex-wrap lg:w-[40%] w-[90%] '>
-                    <div className='title'>Contact me</div>
-                    <p className='my-8 w-[90%]'>I would like to hear about your project and how I could help you. Please fill in the form, and I’ll get back to you as soon as possible.</p>
-                </div>
-                <div className='border border-gray-200 rounded-lg hover:border-violet-800  p-8 h-full shadow-md md:w-[60%] w-[80%] '>
-              
-                <Contact />
-          
-            </div>
+          <a
+            href="https://www.linkedin.com/in/peter-reazik-a84408123/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-all"
+          >
+            <FaLinkedin size={22} />
+            LinkedIn
+          </a>
         </div>
-    );
-}
+      </div>
 
-export default ContactSection;
+      {/* Divider */}
+      <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-16"></div>
+    </div>
+  );
+}
