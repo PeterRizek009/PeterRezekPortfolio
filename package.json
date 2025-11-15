@@ -1,6 +1,6 @@
 {
   "homepage": "https://www.peterrezik.online",
-
+  "name": "peterrezekportfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
