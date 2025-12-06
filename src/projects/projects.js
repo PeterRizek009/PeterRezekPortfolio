@@ -4,10 +4,13 @@ import library from "./library.png";
 import company from "./landing.png";
 import ecommece from "./Ecommercewithredux.PNG";
 import career from "./career.PNG";
+
 import { motion } from "framer-motion";
 import getScrollAnimation from "../utils/getScrollAnimation";
 import ScrollAnimationWrapper from "../Layouts/ScrollAnimationWrapper";
+
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -15,24 +18,38 @@ import Slider from "react-slick";
 const Projects = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
+  // CUSTOM ARROWS
   const PrevArrow = ({ onClick }) => (
-    <div
-      className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/60 p-3 rounded-full cursor-pointer hover:bg-violet-700"
+    <button
       onClick={onClick}
+      className="
+        absolute left-3 top-1/2 -translate-y-1/2 z-20
+        w-10 h-10 flex items-center justify-center
+        bg-black/40 hover:bg-black/60
+        rounded-full backdrop-blur-md
+        text-white transition
+      "
     >
-      <FaChevronLeft size={24} color="white" />
-    </div>
+      <FaChevronLeft size={18} />
+    </button>
   );
 
   const NextArrow = ({ onClick }) => (
-    <div
-      className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-black/60 p-3 rounded-full cursor-pointer hover:bg-violet-700"
+    <button
       onClick={onClick}
+      className="
+        absolute right-3 top-1/2 -translate-y-1/2 z-20
+        w-10 h-10 flex items-center justify-center
+        bg-black/40 hover:bg-black/60
+        rounded-full backdrop-blur-md
+        text-white transition
+      "
     >
-      <FaChevronRight size={24} color="white" />
-    </div>
+      <FaChevronRight size={18} />
+    </button>
   );
 
+  // SLIDER SETTINGS
   const settings = {
     dots: false,
     infinite: true,
@@ -53,6 +70,7 @@ const Projects = () => {
     ],
   };
 
+  // PROJECT DATA
   const projectData = [
     {
       image: news,
@@ -88,56 +106,74 @@ const Projects = () => {
 
   return (
     <div className="block relative w-[80%] mx-auto py-2">
+      {/* SECTION TITLE */}
       <div className="title">Projects</div>
 
       <ScrollAnimationWrapper>
         <Slider {...settings} className="w-full md:p-6">
           {projectData.map((project) => (
-          <motion.div
-  key={project.name}
-  className="project w-full h-full p-4 flex flex-col items-center"
-  variants={scrollAnimation}
->
-  <a href={project.url} className="w-full">
-    <div className="w-full mx-auto h-[320px] rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
-   <img
-  src={project.image}
-  alt={project.name}
-  className="w-full h-full object-fill bg-white"
-  />
+            <motion.div
+              key={project.name}
+              className="project w-full p-4 flex flex-col items-center"
+              variants={scrollAnimation}
+            >
+              {/* PROJECT IMAGE */}
+              <a href={project.url} target="_blank" rel="noopener noreferrer" className="w-full block group">
+                <div
+                  className="
+                    w-full h-[330px]
+                    rounded-2xl overflow-hidden
+                    shadow-md group-hover:shadow-xl 
+                    transition-all duration-300
+                  "
+                >
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="
+                      w-full h-full 
+                      object-cover 
+                      bg-white
+                      group-hover:scale-[1.03]
+                      transition-all duration-500
+                    "
+                  />
+                </div>
+              </a>
 
-    </div>
-  </a>
+              {/* PROJECT TEXT CONTENT */}
+              <div className="w-full mt-4">
+                <h1 className="uppercase text-xl font-extrabold tracking-wide text-gray-900 group-hover:text-violet-700 transition">
+                  {project.name}
+                </h1>
 
-  {/* New Card Style */}
-  <div className="w-full mt-4">
+                {/* UNDERLINE */}
+                <div className="w-16 h-[3px] bg-violet-600 mt-1 rounded-full"></div>
 
-    {/* Title */}
-    <h1 className="uppercase text-xl font-extrabold tracking-wide text-gray-900 hover:text-violet-700 transition">
-      {project.name}
-    </h1>
-
-    {/* Underline Effect */}
-    <div className="w-14 h-1 bg-violet-600 mt-1 rounded"></div>
-
-    {/* Tools as Tags */}
-    <div className="flex flex-wrap mt-3 gap-2">
-      {project.tools.map((tool, idx) => (
-        <span
-          key={idx}
-          className="px-3 py-1 text-xs font-semibold bg-gray-100 border border-gray-300 rounded-full text-gray-700"
-        >
-          {tool}
-        </span>
-      ))}
-    </div>
-  </div>
-</motion.div>
-
+                {/* TOOLS TAGS */}
+                <div className="flex flex-wrap mt-3 gap-2">
+                  {project.tools.map((tool, idx) => (
+                    <span
+                      key={idx}
+                      className="
+                        px-3 py-1 text-xs font-semibold
+                        bg-gray-100 border border-gray-300
+                        rounded-full text-gray-700
+                        hover:bg-violet-100 hover:border-violet-400
+                        transition
+                      "
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           ))}
         </Slider>
       </ScrollAnimationWrapper>
 
+      {/* DIVIDER */}
       <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-28" />
     </div>
   );

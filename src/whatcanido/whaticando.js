@@ -142,6 +142,8 @@ const Card = ({ service, index }) => (
         </div>
 
       </ScrollAnimationWrapper>
+
+       <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-28" />
     </div>
   );
 };
