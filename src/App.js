@@ -29,7 +29,7 @@ function App() {
         <div className="App dark:bg-newBlack bg-[#fafaf7] font-custom dark:text-gray text-newBlack relative">
           <nav className="flex flex-wrap justify-between items-center py-5 md:max-w-[80%]  mx-auto">
             <WordWritingAnimation
-              text="PETER REZEIK"
+              text="PETER REZIK"
               styleData="md:font-bold md:text-4xl  text-xl border-b-4 border-violet-800 py-2 md:mx-2 mx-1"
             />
 
