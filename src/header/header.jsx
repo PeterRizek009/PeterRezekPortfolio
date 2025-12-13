@@ -26,15 +26,17 @@ const Header = () => {
 
             {/* STRONG FRONT-END STATEMENT */}
             <h2 className="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300">
-              I’m a strong Front-End Developer - 
-              <span className="text-violet-700 font-bold"> I build fast, modern, and elegant UIs. </span>
+              I'm a Front-End Developer 
+
+              <span className="text-violet-700 font-bold"> who builds fast, modern, and user-focused web experiences. </span>
             </h2>
 
             {/* DESCRIPTION */}
             <p className="md:w-[650px] w-[330px] text-gray-700 dark:text-gray-300 text-lg md:text-xl leading-relaxed font-medium">
-              I specialize in creating clean, responsive, and beautiful user
-              experiences using React, Tailwind CSS, and modern front-end tools.  
-              I also have solid experience in IT Support and System Administration.
+              
+              I specialize in developing clean, responsive, and high-performance interfaces using React, Tailwind CSS, JavaScript, and modern front-end tools.
+              I focus on writing scalable code, delivering smooth UX, and creating visually appealing, pixel-perfect designs.
+              I also bring technical versatility from my background in IT Support and System Administration, which helps me understand systems end-to-end and build more reliable applications.
             </p>
 
           </div>

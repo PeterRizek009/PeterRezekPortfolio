@@ -73,12 +73,13 @@ const WahtICanDo = () => {
     },
   ];
 
-const Card = ({ service, index }) => (
-  <motion.div
-    key={index}
-    variants={scrollAnimation}
-    className="
-      bg-white 
+  const Card = ({ service, index }) => (
+    <motion.div
+      key={index}
+      variants={scrollAnimation}
+      className="
+    border-2
+border-violet-800
       shadow-lg hover:shadow-xl 
       rounded-xl md:rounded-2xl 
       p-4 md:p-8 
@@ -88,33 +89,32 @@ const Card = ({ service, index }) => (
       max-w-xs md:max-w-none 
       mx-auto
     "
-  >
-    {/* Icon */}
-    <div
-      className={`mx-auto mb-6 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full bg-gradient-to-br ${service.color} text-white shadow-md`}
     >
-      {service.icon}
-    </div>
+      {/* Icon */}
+      <div
+        className={`mx-auto mb-6 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full bg-gradient-to-br ${service.color} text-white shadow-md`}
+      >
+        {service.icon}
+      </div>
 
-    {/* Title */}
-    <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900">
-      {service.title}
-    </h3>
+      {/* Title */}
+      <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900">
+        {service.title}
+      </h3>
 
-    {/* Description */}
-    <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base px-2">
-      {service.description}
-    </p>
+      {/* Description */}
+      <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base px-2">
+        {service.description}
+      </p>
 
-    {/* Bullet points */}
-    <ul className="text-gray-600 text-sm list-disc list-inside text-left max-w-[200px] md:max-w-xs mx-auto space-y-1">
-      {service.details.map((item, idx) => (
-        <li key={idx}>{item}</li>
-      ))}
-    </ul>
-  </motion.div>
-);
-
+      {/* Bullet points */}
+      <ul className="text-gray-600 text-sm list-disc list-inside text-left max-w-[200px] md:max-w-xs mx-auto space-y-1">
+        {service.details.map((item, idx) => (
+          <li key={idx}>{item}</li>
+        ))}
+      </ul>
+    </motion.div>
+  );
 
   return (
     <div className="md:max-w-[80%] mx-auto mt-16">
@@ -124,7 +124,6 @@ const Card = ({ service, index }) => (
       </div>
 
       <ScrollAnimationWrapper>
- 
         <div className="block md:hidden">
           <Swiper spaceBetween={20} slidesPerView={1}>
             {services.map((service, index) => (
@@ -140,10 +139,9 @@ const Card = ({ service, index }) => (
             <Card service={service} index={index} />
           ))}
         </div>
-
       </ScrollAnimationWrapper>
 
-       <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-28" />
+      <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-28" />
     </div>
   );
 };
