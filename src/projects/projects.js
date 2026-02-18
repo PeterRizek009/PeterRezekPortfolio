@@ -111,7 +111,7 @@ const Projects = () => {
     <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-xl overflow-hidden">
 
       {/* RIGHT GRADIENT SHAPE */}
-      <div className="absolute right-0 top-0 h-full w-[78%]">
+<div className="absolute right-0 top-0 h-full w-[45%]">
         <div className="absolute inset-0 bg-gradient-to-b from-indigo-600 to-purple-600" />
         <div className="absolute left-[-120px] top-0 h-full w-[280px] bg-white rounded-r-[200px]" />
       </div>
