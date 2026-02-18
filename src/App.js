@@ -6,7 +6,6 @@ import Projects from "./projects/projects";
 import Footer from "./footer/footer";
 import ContactSection from "./contact/contact";
 import WahtICanDo from "./whatcanido/whaticando";
-import ResumeSection from "./resumesection/ResumeSection";
 
 function App() {
   const [showComponent, setShowComponent] = useState(false);

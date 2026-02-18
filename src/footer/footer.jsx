@@ -2,7 +2,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-indigo-500 to-purple-500 text-white pt-8  overflow-hidden">
+    <footer className="relative bg-[#f4f6fb] text-black pt-8  overflow-hidden">
 
       {/* CONTENT */}
       <div className="relative z-10 max-w-[1300px] mx-auto px-6">

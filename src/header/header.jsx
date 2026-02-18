@@ -1,9 +1,8 @@
-import React from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const HeaderCard = () => {
   return (
-    <section className="flex justify-center px-6 py-12">
+    <section className="min-h-screen flex items-center justify-center bg-[#f4f6fb] px-6 py-12 relative">
 
       {/* CARD CONTAINER */}
       <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-xl overflow-hidden">
