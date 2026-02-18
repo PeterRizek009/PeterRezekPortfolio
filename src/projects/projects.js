@@ -105,78 +105,86 @@ const Projects = () => {
   ];
 
   return (
-    <div className="block relative w-[80%] mx-auto py-2">
-      {/* SECTION TITLE */}
-      <div className="title">Projects</div>
+  <section className="flex justify-center bg-[#f4f6fb] px-6">
 
-      <ScrollAnimationWrapper>
-        <Slider {...settings} className="w-full md:p-6">
-          {projectData.map((project) => (
-            <motion.div
-              key={project.name}
-              className="project w-full p-4 flex flex-col items-center"
-              variants={scrollAnimation}
-            >
-              {/* PROJECT IMAGE */}
-              <a href={project.url} target="_blank" rel="noopener noreferrer" className="w-full block group">
-                <div
-                  className="
-                    w-full h-[330px]
-                    rounded-2xl overflow-hidden
-                    shadow-md group-hover:shadow-xl 
-                    transition-all duration-300
-                  "
+    {/* CARD CONTAINER — SAME AS HEADER */}
+    <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-xl overflow-hidden">
+
+      {/* RIGHT GRADIENT SHAPE */}
+      <div className="absolute right-0 top-0 h-full w-[78%]">
+        <div className="absolute inset-0 bg-gradient-to-b from-indigo-600 to-purple-600" />
+        <div className="absolute left-[-120px] top-0 h-full w-[280px] bg-white rounded-r-[200px]" />
+      </div>
+
+      {/* CONTENT */}
+      <div className="relative z-10 p-14">
+
+        {/* TITLE */}
+        <div className="mb-14 max-w-[520px]">
+          <h2 className="text-4xl font-bold text-gray-900">Projects</h2>
+          <div className="w-24 h-[3px] bg-gradient-to-r from-indigo-600 to-purple-600 mt-3 rounded-full" />
+        </div>
+
+        {/* SLIDER */}
+        <ScrollAnimationWrapper>
+          <Slider {...settings}>
+
+            {projectData.map((project) => (
+              <motion.div
+                key={project.name}
+                variants={scrollAnimation}
+                className="px-4"
+              >
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
                 >
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="
-                      w-full h-full 
-                      object-cover 
-                      bg-white
-                      group-hover:scale-[1.03]
-                      transition-all duration-500
-                    "
-                  />
-                </div>
-              </a>
+                  {/* IMAGE CARD */}
+                  <div className="rounded-2xl overflow-hidden shadow-md group-hover:shadow-2xl transition duration-300">
 
-              {/* PROJECT TEXT CONTENT */}
-              <div className="w-full mt-4">
-                <h1 className="uppercase text-xl font-extrabold tracking-wide text-gray-900 group-hover:text-violet-700 transition">
-                  {project.name}
-                </h1>
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h-[320px] object-cover group-hover:scale-105 transition duration-500"
+                    />
 
-                {/* UNDERLINE */}
-                <div className="w-16 h-[3px] bg-violet-600 mt-1 rounded-full"></div>
+                  </div>
 
-                {/* TOOLS TAGS */}
-                <div className="flex flex-wrap mt-3 gap-2">
-                  {project.tools.map((tool, idx) => (
-                    <span
-                      key={idx}
-                      className="
-                        px-3 py-1 text-xs font-semibold
-                        bg-gray-100 border border-gray-300
-                        rounded-full text-gray-700
-                        hover:bg-violet-100 hover:border-violet-400
-                        transition
-                      "
-                    >
-                      {tool}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </Slider>
-      </ScrollAnimationWrapper>
+                  {/* TEXT */}
+                  <div className="mt-5">
 
-      {/* DIVIDER */}
-      <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-28" />
+                    <h3 className="uppercase text-xl font-extrabold tracking-wide text-gray-900 group-hover:text-indigo-600 transition">
+                      {project.name}
+                    </h3>
+
+                    <div className="w-16 h-[3px] bg-indigo-600 mt-1 rounded-full"></div>
+
+                    {/* TOOLS */}
+                    <div className="flex flex-wrap mt-3 gap-2">
+                      {project.tools.map((tool, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 text-xs font-semibold bg-gray-100 border border-gray-300 rounded-full text-gray-700 hover:bg-indigo-100 hover:border-indigo-400 transition"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+
+                  </div>
+                </a>
+              </motion.div>
+            ))}
+
+          </Slider>
+        </ScrollAnimationWrapper>
+
+      </div>
     </div>
-  );
+  </section>
+);
 };
 
 export default Projects;

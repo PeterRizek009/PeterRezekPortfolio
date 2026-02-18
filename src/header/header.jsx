@@ -1,58 +1,75 @@
-import React, { useMemo } from "react";
-import getScrollAnimation from "../utils/getScrollAnimation";
-import ScrollAnimationWrapper from "../Layouts/ScrollAnimationWrapper";
-import { motion } from "framer-motion";
+import React from "react";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
-const Header = () => {
-  const scrollAnimation = useMemo(() => getScrollAnimation(), []);
-
+const HeaderCard = () => {
   return (
-    <div className="header max-w-[80%] mx-auto pt-20 pb-10 relative">
+    <section className="min-h-screen flex items-center justify-center bg-[#f4f6fb] px-6">
 
-      <ScrollAnimationWrapper>
-        <motion.div variants={scrollAnimation}>
+      {/* CARD */}
+      <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-2xl overflow-hidden mt-3">
 
-          {/* TEXT SECTION */}
-          <div className="flex flex-col gap-6 md:gap-10 md:items-start items-center text-center md:text-left">
+        {/* RIGHT SHAPE */}
+        <div className="absolute right-0 top-0 h-full w-[42%]">
 
-            {/* TITLE */}
-            <h1 className="font-extrabold leading-tight text-[34px] md:text-[70px] tracking-tight">
-              Nice to meet you! <br />
-              I’m{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-purple-700">
-                Peter Rezeik.
-              </span>
-            </h1>
+          <div className="absolute inset-0 bg-gradient-to-b from-indigo-600 to-purple-600" />
 
-            {/* STRONG FRONT-END STATEMENT */}
-            <h2 className="text-xl md:text-2xl font-semibold text-gray-700 dark:text-gray-300">
-              I'm a Front-End Developer 
+          {/* curve cut */}
+          <div className="absolute left-[-140px] top-0 h-full w-[350px] bg-white rounded-r-[220px]" />
 
-              <span className="text-violet-700 font-bold"> who builds fast, modern, and user-focused web experiences. </span>
-            </h2>
+        </div>
 
-            {/* DESCRIPTION */}
-            <p className="md:w-[650px] w-[330px] text-gray-700 dark:text-gray-300 text-lg md:text-xl leading-relaxed font-medium">
-              
-              I specialize in developing clean, responsive, and high-performance interfaces using React, Tailwind CSS, JavaScript, and modern front-end tools.
-              I focus on writing scalable code, delivering smooth UX, and creating visually appealing, pixel-perfect designs.
-              I also bring technical versatility from my background in IT Support and System Administration, which helps me understand systems end-to-end and build more reliable applications.
+        {/* CONTENT */}
+        <div className="relative z-10 p-14">
+
+          {/* NAV */}
+          <div className="flex justify-between items-center mb-16">
+
+            <p className="font-semibold text-gray-800">Peter Rezik</p>
+
+            <div className="flex gap-5 text-black">
+              <BsGithub className="cursor-pointer hover:text-indigo-600" size={40}/>
+              <BsLinkedin className="cursor-pointer hover:text-indigo-600" size={40}/>
+            </div>
+
+          </div>
+
+          {/* HERO TEXT */}
+          <div className="max-w-[520px]">
+
+            <p className="text-sm tracking-widest text-indigo-600 font-semibold mb-5">
+              IT SOLUTIONS SPECIALIST
             </p>
 
+            <h1 className="text-[42px] md:text-[58px] font-bold leading-tight text-gray-900">
+              Hello, my name is <br />
+              <span className="text-indigo-600">Peter Rezik</span>
+            </h1>
+
+            <p className="mt-6 text-gray-600 leading-relaxed">
+              I provide digital solutions for small and medium businesses,
+              including IT administration, system setup, and website
+              development — helping companies operate securely and efficiently.
+            </p>
+
+            <div className="flex gap-4 mt-10">
+
+              <button className="px-6 py-3 bg-indigo-600 text-white rounded-md shadow">
+                Projects
+              </button>
+
+              <button className="px-6 py-3 border border-gray-300 rounded-md">
+                LinkedIn
+              </button>
+
+            </div>
+
           </div>
 
-          {/* Decorative shapes */}
-          <div className="hidden md:block">
-            <div className="absolute top-40 left-[55%] w-24 h-24 rounded-full border border-gray-300/50" />
-            <div className="absolute top-56 left-[78%] w-28 h-28 border border-gray-300/50" />
-          </div>
+        </div>
+      </div>
 
-        </motion.div>
-      </ScrollAnimationWrapper>
-
-      <div className="h-[2px] bg-violet-700 mx-auto mt-24 opacity-70" />
-    </div>
+    </section>
   );
 };
 
-export default Header;
+export default HeaderCard;

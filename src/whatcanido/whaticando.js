@@ -1,42 +1,36 @@
-import React, { useMemo } from "react";
 import { FaCloud } from "react-icons/fa";
 import { BiSupport } from "react-icons/bi";
 import { MdWeb } from "react-icons/md";
 import { SiNodedotjs, SiMongodb, SiExpress } from "react-icons/si";
-import getScrollAnimation from "../utils/getScrollAnimation";
-import ScrollAnimationWrapper from "../Layouts/ScrollAnimationWrapper";
-import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 const WahtICanDo = () => {
-  const scrollAnimation = useMemo(() => getScrollAnimation(), []);
-
   const services = [
     {
       icon: <MdWeb size={40} />,
       color: "from-orange-400 to-yellow-500",
-      title: "Front-End Development",
+      title: "Business Websites",
       description:
-        "Building modern, responsive, fast, and user-friendly web interfaces using React, Tailwind CSS, HTML, CSS, and JavaScript.",
+        "Professional websites designed to attract customers, build trust, and strengthen your online presence.",
       details: [
-        "Responsive UI/UX Design",
-        "Reusable React Components",
-        "API Integration",
-        "Tailwind CSS Styling",
+        "Company websites",
+        "Mobile optimized",
+        "Fast performance",
+        "SEO-ready",
       ],
     },
     {
       icon: <BiSupport size={40} />,
       color: "from-green-400 to-green-600",
-      title: "Technical Support",
+      title: "IT Support",
       description:
-        "Providing IT assistance, troubleshooting issues, installing software, and ensuring smooth system functionality.",
+        "Reliable technical support to keep your business systems running smoothly with minimal downtime.",
       details: [
-        "Hardware/Software Troubleshooting",
-        "Remote Support",
-        "Network Diagnostics",
-        "System Monitoring & Maintenance",
+        "Issue troubleshooting",
+        "Remote assistance",
+        "System maintenance",
+        "Performance optimization",
       ],
     },
     {
@@ -48,101 +42,84 @@ const WahtICanDo = () => {
         </div>
       ),
       color: "from-slate-700 to-emerald-500",
-      title: "Back-End Development",
+      title: "Business Systems",
       description:
-        "Building RESTful APIs and backend architecture using Node.js, Express.js, and MongoDB.",
+        "Custom backend systems and integrations that automate processes and improve workflow efficiency.",
       details: [
-        "Node.js API Development",
-        "Express.js Middleware",
-        "MongoDB / Mongoose",
-        "Authentication (JWT)",
+        "API integrations",
+        "Automation",
+        "Secure data systems",
+        "Custom logic",
       ],
     },
     {
       icon: <FaCloud size={40} />,
       color: "from-blue-400 to-blue-600",
-      title: "System Administration & Cloud",
+      title: "Cloud Infrastructure",
       description:
-        "Managing cloud systems, Windows server administration, and AWS infrastructure.",
+        "Scalable cloud environments and infrastructure setups tailored for business growth and security.",
       details: [
-        "AWS (IAM, VPC, EC2)",
-        "Windows Server",
-        "Active Directory",
-        "Monitoring & Backups",
+        "Cloud setup",
+        "Server configuration",
+        "Access control",
+        "Backup solutions",
       ],
     },
   ];
 
-  const Card = ({ service, index }) => (
-    <motion.div
-      key={index}
-      variants={scrollAnimation}
-      className="
-    border-2
-border-violet-800
-      shadow-lg hover:shadow-xl 
-      rounded-xl md:rounded-2xl 
-      p-4 md:p-8 
-      text-center 
-      transition-all duration-300 
-      hover:-translate-y-2
-      max-w-xs md:max-w-none 
-      mx-auto
-    "
-    >
-      {/* Icon */}
-      <div
-        className={`mx-auto mb-6 w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full bg-gradient-to-br ${service.color} text-white shadow-md`}
-      >
-        {service.icon}
-      </div>
-
-      {/* Title */}
-      <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900">
-        {service.title}
-      </h3>
-
-      {/* Description */}
-      <p className="text-gray-700 mb-4 leading-relaxed text-sm md:text-base px-2">
-        {service.description}
-      </p>
-
-      {/* Bullet points */}
-      <ul className="text-gray-600 text-sm list-disc list-inside text-left max-w-[200px] md:max-w-xs mx-auto space-y-1">
-        {service.details.map((item, idx) => (
-          <li key={idx}>{item}</li>
-        ))}
-      </ul>
-    </motion.div>
-  );
-
   return (
-    <div className="md:max-w-[80%] mx-auto mt-16">
-      <div className="text-center mb-10">
-        <h2 className="text-4xl font-extrabold">What I Can Do</h2>
-        <div className="w-24 h-1 bg-violet-600 mx-auto mt-2 rounded-full"></div>
-      </div>
-
-      <ScrollAnimationWrapper>
-        <div className="block md:hidden">
-          <Swiper spaceBetween={20} slidesPerView={1}>
-            {services.map((service, index) => (
-              <SwiperSlide key={index}>
-                <Card service={service} index={index} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-purple-600 to-indigo-600 p-6">
+      {/* CARD */}
+      <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-2xl overflow-hidden p-14 z-8">
+        {/* TITLE */}
+        <div className="relative z-10 mb-14">
+          <h2 className="text-4xl font-bold text-gray-900">
+            Business Solutions
+          </h2>
+          <div className="w-24 h-[3px] bg-gradient-to-r from-violet-600 to-purple-500 mt-3 rounded-full" />
         </div>
 
-        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card service={service} index={index} />
+        {/* SLIDER */}
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={1}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          className="!flex items-stretch"
+        >
+          {services.map((service, i) => (
+            <SwiperSlide key={i} className="!h-auto flex items-stretch">
+              <div className="group rounded-2xl border border-gray-300 bg-white p-8 shadow-md hover:shadow-2xl transition w-full flex flex-col h-full">
+                {/* icon */}
+                <div
+                  className={`mb-5 w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-br ${service.color} text-white shadow-lg`}
+                >
+                  {service.icon}
+                </div>
+
+                {/* title */}
+                <h3 className="text-xl font-semibold mb-3 text-gray-900">
+                  {service.title}
+                </h3>
+
+                {/* desc */}
+                <p className="text-gray-600 leading-relaxed text-base flex-grow">
+                  {service.description}
+                </p>
+
+                <ul className="text-gray-600 text-sm space-y-1">
+                  {service.details.map((item, idx) => (
+                    <li key={idx}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+            </SwiperSlide>
           ))}
-        </div>
-      </ScrollAnimationWrapper>
-
-      <div className="md:max-w-[1800px] h-[2px] bg-violet-800 mx-auto mt-28" />
-    </div>
+        </Swiper>
+      </div>
+    </section>
   );
 };
 
