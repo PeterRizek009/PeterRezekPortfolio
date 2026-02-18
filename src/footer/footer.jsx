@@ -1,56 +1,52 @@
-import React from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="mt-20 relative">
+    <footer className="relative bg-gradient-to-b from-indigo-500 to-purple-500 text-white pt-8  overflow-hidden">
 
-      {/* Background SVG shape */}
-      <svg className="opacity-10 md:w-[500px] w-[320px] h-[130px] absolute left-0 bottom-[20px]">
-        <ellipse cx="20%" cy="50%" rx="45%" ry="30%" fill="none" stroke="gray" strokeWidth="1" />
-        <ellipse cx="20%" cy="55%" rx="45%" ry="30%" fill="none" stroke="gray" strokeWidth="1" />
-        <ellipse cx="20%" cy="60%" rx="45%" ry="30%" fill="none" stroke="gray" strokeWidth="1" />
-      </svg>
+      {/* CONTENT */}
+      <div className="relative z-10 max-w-[1300px] mx-auto px-6">
 
-      {/* Top divider */}
-      <div className="max-w-[1600px] h-[2px] bg-gray-300 mx-auto mb-10" />
+        {/* TOP */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
 
-      {/* Footer Content */}
-      <div className="bg-gray-100 py-8">
-        <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between">
+          {/* LOGO */}
+          <div className="flex items-center gap-3">
+         
+            <span className="text-lg font-semibold tracking-wide">
+              Peter Rezik
+            </span>
+           
+          </div>
 
-          {/* Logo + Name */}
-          <a href="/" className="flex items-center gap-2 text-gray-900 font-semibold text-lg">
-            <div className="w-10 h-10 rounded-full bg-violet-700 flex items-center justify-center text-white text-xl shadow-md">
-              P
-            </div>
-            <span className="text-xl font-bold">Peter Rezeik</span>
-          </a>
-
-          {/* Social Links */}
-          <div className="flex items-center gap-6 mt-4 sm:mt-0">
+          {/* SOCIAL */}
+          <div className="flex gap-6 text-xl">
             <a
-              href="https://github.com/PeterRizek009"
-              className="text-gray-700 hover:text-violet-700 transition"
+              href="https://github.com"
+              className="hover:text-indigo-400 transition"
             >
-              <BsGithub size={24} />
+              <BsGithub />
             </a>
+
             <a
-              href="https://www.linkedin.com/in/peter-rezik-a84408123/"
-              className="text-gray-700 hover:text-violet-700 transition"
+              href="https://linkedin.com"
+              className="hover:text-indigo-400 transition"
             >
-              <BsLinkedin size={24} />
+              <BsLinkedin />
             </a>
           </div>
+
         </div>
 
-        {/* Bottom small text */}
-        <div className="text-center mt-6 text-gray-500 text-sm">
-          © {new Date().getFullYear()} Peter Rezeik — All Rights Reserved.
-        </div>
+        {/* DIVIDER */}
+        <div className="w-full h-[1px] bg-white/10 my-6" />
+
+        {/* BOTTOM */}
+        <p className="text-center text-sm text-gray-400 tracking-wide">
+          © {new Date().getFullYear()} Peter Rezik — All Rights Reserved.
+        </p>
+
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
