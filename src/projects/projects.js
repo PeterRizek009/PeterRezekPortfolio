@@ -18,38 +18,32 @@ import Slider from "react-slick";
 const Projects = () => {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
 
-  // CUSTOM ARROWS
+  /* ---------- ARROWS ---------- */
   const PrevArrow = ({ onClick }) => (
     <button
       onClick={onClick}
-      className="
-        absolute left-3 top-1/2 -translate-y-1/2 z-20
-        w-10 h-10 flex items-center justify-center
-        bg-black/40 hover:bg-black/60
-        rounded-full backdrop-blur-md
-        text-white transition
-      "
+      className="absolute left-4 top-1/2 -translate-y-1/2 z-20
+      w-10 h-10 flex items-center justify-center
+      bg-white/70 hover:bg-white shadow-md rounded-full
+      backdrop-blur text-gray-700 transition"
     >
-      <FaChevronLeft size={18} />
+      <FaChevronLeft size={16} />
     </button>
   );
 
   const NextArrow = ({ onClick }) => (
     <button
       onClick={onClick}
-      className="
-        absolute right-3 top-1/2 -translate-y-1/2 z-20
-        w-10 h-10 flex items-center justify-center
-        bg-black/40 hover:bg-black/60
-        rounded-full backdrop-blur-md
-        text-white transition
-      "
+      className="absolute right-4 top-1/2 -translate-y-1/2 z-20
+      w-10 h-10 flex items-center justify-center
+      bg-white/70 hover:bg-white shadow-md rounded-full
+      backdrop-blur text-gray-700 transition"
     >
-      <FaChevronRight size={18} />
+      <FaChevronRight size={16} />
     </button>
   );
 
-  // SLIDER SETTINGS
+  /* ---------- SLIDER ---------- */
   const settings = {
     dots: false,
     infinite: true,
@@ -59,132 +53,164 @@ const Projects = () => {
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: { slidesToShow: 1 },
-      },
-      {
-        breakpoint: 640,
-        settings: { slidesToShow: 1 },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 1 } },
+      { breakpoint: 640, settings: { slidesToShow: 1 } },
     ],
   };
 
-  // PROJECT DATA
+  /* ---------- DATA ---------- */
   const projectData = [
     {
       image: news,
       url: "https://thetodaynews.netlify.app/",
-      name: "NEWS CAST",
-      tools: ["HTML", "Tailwind CSS", "React JS", "Responsive design"],
+      name: "News Platform System",
+      tools: [
+        "Fast loading experience",
+        "Mobile optimized interface",
+        "Clean UI structure",
+      ],
     },
     {
       image: library,
       url: "https://books-ecommerceapp.netlify.app/",
-      name: "ALEX BOOKS STORE",
-      tools: ["HTML", "CSS", "Bootstrap", "React JS", "Responsive design"],
+      name: "E-Commerce Store Solution",
+      tools: [
+        "Product showcase system",
+        "Customer friendly browsing",
+        "Conversion focused design",
+      ],
     },
     {
       image: company,
       url: "https://companylanpgtemplate.netlify.app/",
-      name: "CONTRACTING COMPANY",
-      tools: ["HTML", "Tailwind CSS", "React JS", "Responsive design"],
+      name: "Corporate Website Platform",
+      tools: [
+        "Professional presence",
+        "Lead generation layout",
+        "Modern design",
+      ],
     },
     {
       image: ecommece,
       url: "https://peterrizek009.github.io/ecommerce-redux",
-      name: "CLOSET CANVAS",
-      tools: ["HTML", "Tailwind CSS", "React JS", "Redux", "Responsive design"],
+      name: "Retail Management Interface",
+      tools: [
+        "Scalable architecture",
+        "Secure logic",
+        "Performance optimized",
+      ],
     },
     {
       image: career,
       url: "https://www.youtube.com/watch?v=ZJXpM-DohW0",
-      name: "CAREER TRACKR",
-      tools: ["HTML", "Tailwind CSS", "React JS", "Express JS", "MongoDB"],
+      name: "Career Tracking System",
+      tools: [
+        "Database integration",
+        "Automation logic",
+        "Structured workflow",
+      ],
     },
   ];
 
+  /* ---------- UI ---------- */
   return (
-  <section className="flex justify-center bg-[#f4f6fb] px-6">
+    <section className="flex justify-center bg-[#f4f6fb] px-6 py-24">
 
-    {/* CARD CONTAINER — SAME AS HEADER */}
-    <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-xl overflow-hidden">
+      {/* OUTER CARD */}
+      <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-xl overflow-hidden">
 
-      {/* RIGHT GRADIENT SHAPE */}
-<div className="absolute right-0 top-0 h-full w-[45%]">
-        <div className="absolute inset-0 bg-gradient-to-b from-indigo-600 to-purple-600" />
-        <div className="absolute left-[-120px] top-0 h-full w-[280px] bg-white rounded-r-[200px]" />
-      </div>
+        {/* RIGHT SHAPE */}
+        <div className="absolute right-0 top-0 h-full w-[42%]">
 
-      {/* CONTENT */}
-      <div className="relative z-10 p-14">
+          <div className="absolute inset-0 bg-gradient-to-b from-indigo-500 to-purple-500" />
 
-        {/* TITLE */}
-        <div className="mb-14 max-w-[520px]">
-          <h2 className="text-4xl font-bold text-gray-900">Projects</h2>
-          <div className="w-24 h-[3px] bg-gradient-to-r from-indigo-600 to-purple-600 mt-3 rounded-full" />
+          <div className="absolute left-[-160px] top-0 h-full w-[420px] bg-white rounded-r-[240px]" />
+
         </div>
 
-        {/* SLIDER */}
-        <ScrollAnimationWrapper>
-          <Slider {...settings}>
+        {/* CONTENT */}
+        <div className="relative z-10 p-16">
 
-            {projectData.map((project) => (
-              <motion.div
-                key={project.name}
-                variants={scrollAnimation}
-                className="px-4"
-              >
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block"
+          {/* TITLE */}
+          <div className="mb-16 max-w-[520px]">
+
+            <h2 className="text-4xl font-bold text-gray-900">
+              Business Solutions Portfolio
+            </h2>
+
+            <p className="text-gray-600 mt-4 leading-relaxed">
+              Real systems and platforms built to help businesses improve
+              performance, increase credibility, and operate efficiently.
+            </p>
+
+            <div className="w-24 h-[3px] bg-gradient-to-r from-indigo-500 to-purple-500 mt-6 rounded-full" />
+
+          </div>
+
+          {/* SLIDER */}
+          <ScrollAnimationWrapper>
+            <Slider {...settings}>
+
+              {projectData.map((project) => (
+                <motion.div
+                  key={project.name}
+                  variants={scrollAnimation}
+                  className="px-5"
                 >
-                  {/* IMAGE CARD */}
-                  <div className="rounded-2xl overflow-hidden shadow-md group-hover:shadow-2xl transition duration-300">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block"
+                  >
 
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      className="w-full h-[320px] object-cover group-hover:scale-105 transition duration-500"
-                    />
-
-                  </div>
-
-                  {/* TEXT */}
-                  <div className="mt-5">
-
-                    <h3 className="uppercase text-xl font-extrabold tracking-wide text-gray-900 group-hover:text-indigo-600 transition">
-                      {project.name}
-                    </h3>
-
-                    <div className="w-16 h-[3px] bg-indigo-600 mt-1 rounded-full"></div>
-
-                    {/* TOOLS */}
-                    <div className="flex flex-wrap mt-3 gap-2">
-                      {project.tools.map((tool, idx) => (
-                        <span
-                          key={idx}
-                          className="px-3 py-1 text-xs font-semibold bg-gray-100 border border-gray-300 rounded-full text-gray-700 hover:bg-indigo-100 hover:border-indigo-400 transition"
-                        >
-                          {tool}
-                        </span>
-                      ))}
+                    {/* IMAGE */}
+                    <div className="rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl transition duration-300">
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="w-full h-[300px] object-cover group-hover:scale-105 transition duration-500"
+                      />
                     </div>
 
-                  </div>
-                </a>
-              </motion.div>
-            ))}
+                    {/* TEXT */}
+                    <div className="mt-6">
 
-          </Slider>
-        </ScrollAnimationWrapper>
+                      <h3 className="text-lg font-semibold text-gray-900 group-hover:text-indigo-600 transition">
+                        {project.name}
+                      </h3>
 
+                      <div className="w-14 h-[3px] bg-indigo-500 mt-2 rounded-full"></div>
+
+                      {/* TAGS */}
+                      <div className="flex flex-wrap mt-4 gap-2">
+                        {project.tools.map((tool, idx) => (
+                          <span
+                            key={idx}
+                            className="px-3 py-1 text-xs font-medium
+                            bg-gray-100 border border-gray-200
+                            rounded-full text-gray-600
+                            hover:bg-indigo-50 hover:border-indigo-300
+                            transition"
+                          >
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+
+                    </div>
+
+                  </a>
+                </motion.div>
+              ))}
+
+            </Slider>
+          </ScrollAnimationWrapper>
+
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
 };
 
 export default Projects;

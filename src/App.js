@@ -27,10 +27,6 @@ function App() {
         <div className="App dark:bg-newBlack bg-[#fafaf7] font-custom dark:text-gray text-newBlack relative">
           
 
-          {/* <div className='w-[445px] h-[720px] top-0 absolute bg-darkgray md:right-[600px]'>
-              <img src={peterimage} className=''></img>
-            </div> */}
-
           <Header />
           <WahtICanDo />
           {/* <Skills /> */}
