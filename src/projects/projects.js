@@ -114,7 +114,7 @@ const Projects = () => {
 
   /* ---------- UI ---------- */
   return (
-    <section className="flex justify-center bg-[#f4f6fb] px-6 py-24">
+    <section className="flex justify-center px-6 py-24">
 
       {/* OUTER CARD */}
       <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-xl overflow-hidden">

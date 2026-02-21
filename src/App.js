@@ -23,9 +23,7 @@ function App() {
   return (
     <>
       {showComponent === true ? (
-        <div className="App dark:bg-newBlack bg-[#fafaf7] font-custom dark:text-gray text-newBlack relative">
-          
-
+        <div className="App dark:bg-violet-900 bg-[#fafaf7] font-custom  relative">
           <Header />
           <WahtICanDo />
           {/* <Skills /> */}

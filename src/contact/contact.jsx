@@ -2,7 +2,7 @@ import { FaWhatsapp, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function ContactSection() {
   return (
-    <section className="flex justify-center bg-[#f4f6fb] px-6 py-10">
+    <section className="flex justify-center  px-6 py-10">
 
       {/* OUTER CARD SAME STYLE */}
       <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-xl overflow-hidden">

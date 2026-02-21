@@ -68,7 +68,7 @@ const WahtICanDo = () => {
   ];
 
   return (
-    <section className="flex justify-center bg-[#f4f6fb] px-6">
+    <section className="flex justify-center px-6">
 
       {/* CARD */}
       <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-xl overflow-hidden">

@@ -2,7 +2,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const HeaderCard = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-[#f4f6fb] px-6 py-12 relative">
+    <section className="min-h-screen flex items-center justify-center  px-6 py-12 relative">
 
       {/* CARD CONTAINER */}
       <div className="relative w-full max-w-[1300px] rounded-2xl bg-white shadow-xl overflow-hidden">
@@ -30,15 +30,24 @@ const HeaderCard = () => {
 
             <div className="flex gap-6 text-gray-700">
 
+   <a
+              href="https://github.com"
+              className="hover:text-indigo-400 transition"
+            >
               <BsGithub
-                size={26}
+                size={30}
                 className="cursor-pointer hover:text-indigo-600 transition"
               />
-
+              </a>
+ <a
+              href="https://www.linkedin.com/in/peter-rezik-a84408123/"
+              className="hover:text-indigo-400 transition"
+            >
               <BsLinkedin
-                size={26}
+                size={30}
                 className="cursor-pointer hover:text-indigo-600 transition"
               />
+              </a>
 
             </div>
           </div>
