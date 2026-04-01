@@ -72,8 +72,8 @@ const Projects = () => {
     },
     {
       image: library,
-      url: "https://books-ecommerceapp.netlify.app/",
-      name: "E-Commerce Store Solution",
+      url: "https://peterrizek009.github.io/vinebookstore/",
+      name: "VINE Bookstore Platform",
       tools: [
         "Product showcase system",
         "Customer friendly browsing",
