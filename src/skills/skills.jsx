@@ -7,7 +7,7 @@ import {
 } from 'react-icons/bi'
 
 import { SiExpress } from 'react-icons/si'
-import CustomSVG from '../components/circleSVG';
+import CustomSVG from '../components/CustomSVG';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -89,7 +89,6 @@ const Skills = () => {
                     )}
                 </Slider>
             </div>
-            <CustomSVG HorizPos={`right-0`} VertiPos={`top-[800px]`} leftSVG={true} />
 
 
             <div className="md:max-w-[1800px]  h-px dark:bg-white bg-newBlack mx-auto mt-28 mb-8" />

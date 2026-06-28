@@ -1,4 +1,4 @@
-import "./App.css";
+
 import Header from "./header/header";
 import { useEffect, useState } from "react";
 import Loading from "./loading/loading";
@@ -6,6 +6,11 @@ import Projects from "./projects/projects";
 import Footer from "./footer/footer";
 import ContactSection from "./contact/contact";
 import WahtICanDo from "./whatcanido/whaticando";
+import Skills from "./skills/skills";
+import HeaderHero from "./components/Headerhero";
+import ProjectsSection from "./components/projects";
+
+
 
 function App() {
   const [showComponent, setShowComponent] = useState(false);
@@ -24,14 +29,17 @@ function App() {
     <>
       {showComponent === true ? (
         <div className="App dark:bg-violet-900 bg-[#fafaf7] font-custom  relative">
-          <Header />
-          <WahtICanDo />
-          {/* <Skills /> */}
-          <Projects />
+           <Header />
+          <WahtICanDo /> 
+          {/* <Skills />  */}
+           <Projects />
           <ContactSection />
-          {/* <ResumeSection /> */}
+           {/* <ResumeSection />  */}
           <Footer />
-        </div>
+         
+          {/* <HeaderHero/>
+          <ProjectsSection/> */}
+        </div> 
       ) : (
         <Loading />
       )}
