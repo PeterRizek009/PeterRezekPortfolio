@@ -6,7 +6,7 @@ import Projects from "./projects/projects";
 import Footer from "./footer/footer";
 import ContactSection from "./contact/contact";
 import WahtICanDo from "./whatcanido/whaticando";
-import Skills from "./skills/skills";
+// import Skills from "./skills/skills";
 import HeaderHero from "./components/Headerhero";
 import ProjectsSection from "./components/projects";
 
